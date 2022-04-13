@@ -9,28 +9,28 @@ import asyncio
 
 async def count_standard():
     print("Standard One")
-    await asyncio.sleep(3)
+    await asyncio.sleep(2.5)
     print("Standard Two")
-    await asyncio.sleep(3)
+    await asyncio.sleep(2.5)
     print("Standard Three")
 
 async def count_fast():
-    print("Fast One")
+    print("Fast     One")
     await asyncio.sleep(1)
-    print("Fast Two")
+    print("Fast     Two")
     await asyncio.sleep(1)
-    print("Fast Three")
+    print("Fast     Three")
 
 
 async def count_slow():
-    print("Slow One")
-    await asyncio.sleep(5)
-    print("Slow Two")
-    await asyncio.sleep(5)
-    print("Slow Three")
+    print("Slow     One")
+    await asyncio.sleep(5.5)
+    print("Slow     Two")
+    await asyncio.sleep(5.5)
+    print("Slow     Three")
 
 async def test():
-    await asyncio.gather(count_standard(), count_fast(), count_slow())
+    await asyncio.gather(count_fast(), count_standard(), count_slow())
 
 if __name__ == "__main__":
     import time
