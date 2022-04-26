@@ -8,7 +8,7 @@
     padding: 0;
     margin: 0;
   }
-  
+
   svg:not(:root) {
     display: block;
   }
@@ -60,6 +60,7 @@
 
 
   <script>
+  /* We have to write our own waiting fucnction */
   function sleep(milliseconds) {
     const date = Date.now();
     let currentDate = null;
@@ -70,6 +71,7 @@
 
 
   document.querySelector('#wait').addEventListener('click', () => {
+    /* Synchronous function call */
     sleep(5000)
     document.querySelector('#output').textContent = `Finished waiting!`;
   });
