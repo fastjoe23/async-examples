@@ -9,8 +9,10 @@ import asyncio
 
 async def count():
     print("One")
-    await asyncio.sleep(1)
+    await asyncio.sleep(.5)
     print("Two")
+    await asyncio.sleep(.5)
+    print("Three")
 
 async def test():
     await asyncio.gather(count(), count(), count())

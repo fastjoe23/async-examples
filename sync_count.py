@@ -9,8 +9,10 @@ Created on Fri Apr  8 21:34:11 2022
 
 def count():
     print("One")
-    time.sleep(1)
+    time.sleep(.5)
     print("Two")
+    time.sleep(.5)
+    print("Three")
 
 def test():
     count()
